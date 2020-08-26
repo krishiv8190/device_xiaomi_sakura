@@ -24,8 +24,11 @@ $(call inherit-product, vendor/MiuiCamera/config.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/sakura/device.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
+
+# RR Stuffs
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sakura
