@@ -29,6 +29,7 @@ $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # RR Stuffs
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sakura
