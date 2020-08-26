@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_sakura.mk
+    $(LOCAL_DIR)/rr_sakura.mk
+
+COMMON_LUNCH_CHOICES := \
+    rr_sakura-user \
+    rr_sakura-userdebug \
+    rr_sakura-eng
