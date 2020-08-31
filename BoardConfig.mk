@@ -38,36 +38,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
 
 TARGET_BOARD_SUFFIX := _64
-<<<<<<< HEAD
 TARGET_USES_64_BIT_BINDER := true
-=======
-
-# Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom msm_rtb.filter=0x237
-BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci
-BOARD_KERNEL_CMDLINE += earlycon=msm_hsl_uart,0x78af000
-BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
-BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
-BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/mmcblk0p54\"
-
-BOARD_KERNEL_BASE        := 0x80000000
-BOARD_KERNEL_PAGESIZE    := 2048
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sakura
-TARGET_KERNEL_VERSION := 4.9
-TARGET_KERNEL_CONFIG := sakura_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r353983d
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := sakura,sakura_india
-
-# ANT
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
->>>>>>> db68bd5... sakura: Build kernel With Clang 9.0.4
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -180,7 +151,8 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 TARGET_KERNEL_CONFIG := sakura_defconfig
 TARGET_KERNEL_VERSION := 4.9
-
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := r353983d
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
